@@ -29,6 +29,9 @@ public class User {
     
     @Column(name="password")
     private String password;
+
+	@Column(name="status")
+    private String status;
     
     @Column(name="role_id", insertable = false, updatable = false)
     private int roleId;
@@ -151,12 +154,31 @@ public class User {
 		this.usertype = usertype;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", username=" + username + ", password=" + password + ", roleId=" + roleId + ", companyId="
-				+ companyId + ", typeId=" + typeId + "]";
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 
+	@Override
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", email='" + email + '\'' +
+				", username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", status='" + status + '\'' +
+				", roleId=" + roleId +
+				", companyId=" + companyId +
+				", typeId=" + typeId +
+				", role=" + role +
+				", company=" + company +
+				", usertype=" + usertype +
+				'}';
+	}
 }
