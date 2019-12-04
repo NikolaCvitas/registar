@@ -1,18 +1,11 @@
 package hr.nikola.registar.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
 import hr.nikola.registar.entity.Company;
 import hr.nikola.registar.service.CompanyService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
@@ -37,9 +30,9 @@ public class CompanyController {
     }
 
     @PostMapping("/companies")
-    public void save(@RequestBody Company user) {
+    public void save(@RequestBody Company company) {
 
-    	companyService.save(user);
+    	companyService.save(company);
     }
 
     @DeleteMapping("/companies/{id}")

@@ -1,18 +1,18 @@
 package hr.nikola.registar.service;
 
-import java.util.List;
-
 import hr.nikola.registar.entity.Company;
+
+import java.util.List;
 
 
 public interface CompanyService {
 	
-    public List<Company> findAll();
+     List<Company> findAll();
 
-    public Company findById(int theId);
+     Company findById(int theId);
 
-    public void save(Company company);
+     void save(Company company);
 
-    public void deleteById(int theId);
+     void deleteById(int theId);
 
 }
