@@ -9,6 +9,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
+@RequestMapping("/api")
 public class CompanyController {
 	
 	private CompanyService companyService;
@@ -20,6 +21,7 @@ public class CompanyController {
 
     @GetMapping("/companies")
     public List<Company> findAll() {
+        System.out.println("__________ findAll");
         return companyService.findAll();
     }
 

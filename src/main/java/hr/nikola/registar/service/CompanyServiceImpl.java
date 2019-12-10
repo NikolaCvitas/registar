@@ -14,9 +14,13 @@ public class CompanyServiceImpl implements CompanyService {
 	
 	private CompanyRepository companyRepository;
 
+	public CompanyServiceImpl(CompanyRepository companyRepository) {
+		this.companyRepository = companyRepository;
+	}
+
 	@Override
 	public List<Company> findAll() {
-		
+
 		return companyRepository.findAll();
 	}
 
